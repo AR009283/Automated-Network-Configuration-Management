@@ -1,0 +1,19 @@
+
+enable
+configure terminal
+
+hostname R-01
+
+ip domain-name network.local
+
+username admin privilege 15 secret Admin@123
+
+ip ssh version 2
+
+line vty 0 4
+login local
+transport input ssh
+exit
+
+end
+write memory
